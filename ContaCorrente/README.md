@@ -1,5 +1,7 @@
-# Exercício Conta Corrente
-* Crie uma classe denominada **ContaCorrente** usando a linguagem Java no Eclipse.
+# Tarefa - Conta Corrente :bank: :moneybag: 
+
+Crie uma classe denominada **ContaCorrente** usando a linguagem Java no Eclipse.
+
 * Defina os atributos e métodos listados abaixo. Primeiramente, com relação aos métodos, pense apenas na assinatura (parâmetros e retorno) e ignore sua implementação.
 * Implemente os métodos.
 * Pense em 2 ou 3 construtores diferentes que podem ser úteis para esta classe.
