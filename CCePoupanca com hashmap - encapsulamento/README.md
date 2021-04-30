@@ -1,6 +1,6 @@
 # Tarefa - Quebra de Encapsulamento :bank: :moneybag: 
 
-**<u>As entregas desta tarefa estão sublinhadas</u>.** São 3 entregas que são variações do mesmo código. Você pode criar três projetos separados (todos modificações do mesmo código base) e entregar um arquivo compactado contendo todos eles.
+**AS ENTREGAS DESTA TAREFA ESTÃO ESCRITAS EM CAIXA ALTA.** São 3 entregas que são variações do mesmo código. Você pode criar três projetos separados (todos modificações do mesmo código base) e entregar um arquivo compactado contendo todos eles.
 
 Considere a **Tarefa - Banco com HashMap** que vimos anteriormente, na qual criamos algumas classes que representam contas de um banco e então criamos uma classe **Banco** para gerenciar estas contas. A classe **Banco** provê o acesso a uma conta específica através do método:
 
@@ -36,10 +36,10 @@ Este método retorna uma **Collection** com as contas do banco. Sugiro você pes
 
 Considerando as discussões sobre quebra de encapsulamento apresentadas nas aulas, você consegue identificar um problema nesta solução? Pense sobre isto por um momento antes de continuar lendo.
 
-Se ainda não conseguiu encontrar o problema, imagine então invocar o método **banco.getContas().clear()** que remove todas as contas da lista. **<u>Escreva um programa para testar isto</u>.** Consegue ver o problema agora?
+Se ainda não conseguiu encontrar o problema, imagine então invocar o método **banco.getContas().clear()** que remove todas as contas da lista. **ESCREVA UM PROGRAMA PARA TESTAR ISTO.** Consegue ver o problema agora?
 
 Como prover a funcionalidade desejada (acesso a todas as contas do banco) sem quebrar o encapsulamento da classe **Banco**? Existem diferentes maneiras de resolver este problema. Procure na internet por soluções antes de continuar lendo.
 
-Espero que você tenha conseguido resolver o problema de alguma maneira. Uma das maneiras de se resolver isto é retornar uma cópia da lista de contas, ao invés de retornar a lista original (aquela da **HashMap**). Podemos fazer isto de diferentes formas. Uma delas é retornar **new ArrayList<>(contas)** no método getContas(). Desta maneira, estamos retornando uma cópia da lista original. O usuário do método poderá remover elementos desta lista, mas isto não afetará o **HashMap** do **Banco**. **Altere sua implementação anterior para usar esta ideia e teste se ela funciona** (evita o problema do usuário do código alterar o HashMap).
+Espero que você tenha conseguido resolver o problema de alguma maneira. Uma das maneiras de se resolver isto é retornar uma cópia da lista de contas, ao invés de retornar a lista original (aquela da **HashMap**). Podemos fazer isto de diferentes formas. Uma delas é retornar **new ArrayList<>(contas)** no método getContas(). Desta maneira, estamos retornando uma cópia da lista original. O usuário do método poderá remover elementos desta lista, mas isto não afetará o **HashMap** do **Banco**. **ALTERE SUA IMPLEMENTAÇÃO ANTERIOR PARA USAR ESTA IDEIA E TESTE SE ELA FUNCIONA** (evita o problema do usuário do código alterar o HashMap).
 
-Outra maneira é utilizar o método estático **[Collection<> unmodifiableCollection(Collection<> c)](https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#unmodifiableCollection-java.util.Collection-)** da classe Collections. Leia a documentação deste método e implemente uma solução para o nosso problema utilizando ele. A classe **Collections** (observe que tem um **s** no final do nome) provê vários métodos auxiliares para manipular objetos **Collection** (sem **s** no final). **<u>Altere sua implementação anterior usando esta ideia.</u>**
+Outra maneira é utilizar o método estático **[Collection<> unmodifiableCollection(Collection<> c)](https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#unmodifiableCollection-java.util.Collection-)** da classe Collections. Leia a documentação deste método e implemente uma solução para o nosso problema utilizando ele. A classe **Collections** (observe que tem um **s** no final do nome) provê vários métodos auxiliares para manipular objetos **Collection** (sem **s** no final). **ALTERE SUA IMPLEMENTAÇÃO ANTERIOR PARA USAR ESTA IDEIA**
