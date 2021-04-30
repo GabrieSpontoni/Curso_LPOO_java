@@ -14,7 +14,7 @@ Pense por um momento como resolver este problema.
 
 Uma solução seria incluir o método abaixo na classe **Banco**:
 
-Collection <Conta> getContas() {
+Collection <<g>Conta> getContas() {
 
  **return** contas.values();
 
